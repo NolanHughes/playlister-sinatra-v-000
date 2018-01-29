@@ -15,7 +15,6 @@ class SongsController < ApplicationController
     @artist = Artist.create(name: params[:artist_name])
     binding.pry
     @genre = Genre.find_by_id(params[:genres.first])
-    binding.pry
 
     redirect to '/songs/:slug'
   end
