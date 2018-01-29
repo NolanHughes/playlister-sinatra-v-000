@@ -3,7 +3,7 @@
   <input type="text" id="Name" name="name" />
 
   <%@genres.each do |genre|%>
-    <input type="checkbox" name="song[genre_ids][]" value="<%=genre.id%>" id="<%=genre.id%>"><%=genre.name%></input>
+    <input type="checkbox" name="song[genre_id][]" value="<%=genre.id%>" id="<%=genre.id%>"><%=genre.name%></input>
   <%end%>
 
   <input type="submit" value="Submit"/>
