@@ -12,7 +12,7 @@ class SongsController < ApplicationController
 
   post '/songs' do
     binding.pry
-    @song = Song.create(name: params[:name])
+    @song = Song.new(name: params[:name])
     @artist = Artist.create(name: params[:artist_name])
 
 
