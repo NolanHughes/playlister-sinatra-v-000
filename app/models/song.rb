@@ -4,8 +4,7 @@ class Song < ActiveRecord::Base
   belongs_to :artist
 
   def slug
-    @correct_name = self.name
-    @correct_name.downcase.gsub(" ", "-")
+    self.name.downcase.gsub(" ", "-")
   end
 
   def self.find_by_slug(slug)
