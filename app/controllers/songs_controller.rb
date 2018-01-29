@@ -18,7 +18,7 @@ class SongsController < ApplicationController
     song.artist = artist
     song.genres << genre
     song.save
-    
+
     redirect to '/songs/:slug'
   end
 
