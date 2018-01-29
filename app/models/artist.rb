@@ -8,7 +8,11 @@ class Artist < ActiveRecord::Base
   end
 
   def self.find_by_slug(slug)
-    unslugged = slug.gsub("-", " ").split.collect {|word| word.capitalize}.join(" ")
-    find_by(name: unslugged)
+    Artist.all.find do |artist|
+      if artist.slug.include?(slug)
+        Artist.find_by(name: artist.name)
+      end
+    end
+    
   end
 end
