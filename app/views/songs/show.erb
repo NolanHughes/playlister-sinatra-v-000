@@ -5,6 +5,6 @@
 <h3>Genres:</h3>
 <ul>
   <% @song.genres.each do |genre| %>
-    <li><%= genre.name %></li>
+    <li><a><%= genre.name %></a></li>
   <% end %>
 </ul>
