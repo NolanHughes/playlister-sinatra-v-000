@@ -10,7 +10,7 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
-    song = Song.create(name: params[:name])
+    @song = Song.create(name: params[:name])
 
     if Artist.all.find_by(name: params[:artist_name])
       artist = Artist.all.find_by(name: params[:artist_name])
@@ -19,9 +19,12 @@ class SongsController < ApplicationController
     end
     genre = Genre.find_by_id(params[:genres].first)#iterate and make work for multiple genres
 
-    song.artist = artist
-    song.genres << genre
-    song.save
+    @song.artist = artist
+    @song.genres << genre
+    @song.save
+
+    flash[:message] = "Successfully created song."
+    redirect to("/songs/#{@song.slug}")
 
     redirect to "/songs/#{song.slug}"
   end
