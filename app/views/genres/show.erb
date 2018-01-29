@@ -3,12 +3,12 @@
 <h3>Artists:</h3>
 <ul>
   <% @genre.artists.each do |artist| %>
-    <li><%= artist.name %></li>
+    <li><a><%= artist.name %></a></li>
   <% end %>
 </ul>
 <h3>Songs:</h3>
 <ul>
   <% @genre.songs.each do |song| %>
-    <li><%= song.name %></li>
+    <li><a><%= song.name %></a></li>
   <% end %>
 </ul>
