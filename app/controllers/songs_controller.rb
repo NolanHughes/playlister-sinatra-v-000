@@ -11,7 +11,7 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
-    song = Song.new(name: params[:name])
+    song = Song.create(name: params[:name])
     artist = Artist.create(name: params[:artist_name])
     genre = Genre.find_by_id(params[:genres].first)#iterate and make work for multiple genres
     
