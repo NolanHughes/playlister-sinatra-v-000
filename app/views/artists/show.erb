@@ -10,6 +10,6 @@
 <h3>Genres:</h3>
 <ul>
   <% @artist.genres.each do |genre| %>
-    <li><a><%= genre.name %></a></li>
+    <li><a href="genres/<%= genre.slug %>"><%= genre.name %></a></li>
   <% end %>
 </ul>
