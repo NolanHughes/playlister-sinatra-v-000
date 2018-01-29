@@ -8,12 +8,12 @@ class Genre < ActiveRecord::Base
   end
 
   def self.find_by_slug(slug)
-    Song.all.find do |song|
-      if song.slug.include?(slug)
-        Song.find_by(name: song.name)
+    Genre.all.find do |genre|
+      if genre.slug.include?(slug)
+        Genre.find_by(name: genre.name)
       end
     end
 
   end
-  
+
 end
