@@ -14,7 +14,7 @@ class Song < ActiveRecord::Base
     Song.all.find do |song|
       binding.pry
       if song.slug.include?(slug)
-
+        Song.find_by(name: song.name)
       end
     end
   end
