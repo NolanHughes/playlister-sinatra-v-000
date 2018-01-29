@@ -5,7 +5,6 @@ class Song < ActiveRecord::Base
 
   def slug
     @correct_name = self.name
-    binding.pry
     @correct_name.downcase.gsub(" ", "-")
   end
 
