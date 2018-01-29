@@ -2,7 +2,7 @@
 <form method="POST" action="/songs">
   <input type="text" id="Name" name="Name" value="Name"/>
   <input type="checkbox" />
-<%pry%>
+<%binding.pry%>
   <%@genres.each do |genre|%>
     <input type="checkbox" name="genre" value="<%=genre.id%>" id="<%=genre.id%>"><%=owner.name%></input>
   <%end%>
