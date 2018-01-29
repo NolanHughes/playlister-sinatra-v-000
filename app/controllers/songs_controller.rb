@@ -54,7 +54,7 @@ class SongsController < ApplicationController
     @song.save
 
     flash[:message] = "Successfully updated song."#This is for flash message
-    # erb :"/songs/#{@song.slug}"
+    erb :"/songs/#{@song.slug}"
   end
 
 end
