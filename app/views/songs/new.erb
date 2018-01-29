@@ -4,7 +4,7 @@
   <input type="checkbox" />
 <%binding.pry%>
   <%@genres.each do |genre|%>
-    <input type="checkbox" name="genre" value="<%=genre.id%>" id="<%=genre.id%>"><%=owner.name%></input>
+    <input type="checkbox" name="genre" value="<%=genre.id%>" id="<%=genre.id%>"><%=genre.name%></input>
   <%end%>
   <input type="submit" value="Submit"/>
 </form>
