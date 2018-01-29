@@ -45,7 +45,7 @@ class SongsController < ApplicationController
     else
       artist = Artist.create(name: params[:artist_name])
     end
-    binding.pry
+
     song.artist = artist
     song.save
   end
