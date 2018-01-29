@@ -37,7 +37,6 @@ class SongsController < ApplicationController
   end
 
   post '/songs/:slug' do
-
     song = Song.find_by_slug(params[:slug])
 
     if Artist.all.find_by(name: params[:artist_name])
