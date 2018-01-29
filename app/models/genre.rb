@@ -13,7 +13,7 @@ class Genre < ActiveRecord::Base
         Song.find_by(name: song.name)
       end
     end
-    
+
   end
   
 end
