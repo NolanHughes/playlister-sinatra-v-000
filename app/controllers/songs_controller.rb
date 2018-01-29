@@ -46,7 +46,8 @@ class SongsController < ApplicationController
       artist = Artist.create(name: params[:artist_name])
     end
         binding.pry
-    Song.update(song.id, artist: artist)
+    song.artist = artist
+    song.save
   end
 
 end
