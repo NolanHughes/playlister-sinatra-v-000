@@ -12,7 +12,6 @@ class Song < ActiveRecord::Base
     # find_by(name: unslugged)
 
     Song.all.find do |song|
-      binding.pry
       if song.slug.include?(slug)
         Song.find_by(name: song.name)
       end
