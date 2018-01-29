@@ -36,4 +36,8 @@ class SongsController < ApplicationController
     erb :'songs/edit'
   end
 
+  post '/songs/:slug' do
+    @song = Song.update
+  end
+
 end
