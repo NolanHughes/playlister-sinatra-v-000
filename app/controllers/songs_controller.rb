@@ -11,7 +11,6 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
-    binding.pry
     @song = Song.new(name: params[:name])
     @artist = Artist.create(name: params[:artist_name])
     binding.pry
