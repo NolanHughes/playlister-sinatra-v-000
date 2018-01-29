@@ -18,7 +18,8 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
-    @song = Song.create(name: params[:name])
+    binding.pry
+    @song = Song.create(name: params[:Name])
   end
 
 end
