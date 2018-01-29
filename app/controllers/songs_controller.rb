@@ -19,7 +19,7 @@ class SongsController < ApplicationController
     song.genres << genre
     song.save
 
-    redirect to '/songs/:slug'
+    redirect to "/songs/#{song.slug}"
   end
 
   get '/songs/:slug' do
