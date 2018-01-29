@@ -16,7 +16,8 @@ class SongsController < ApplicationController
     binding.pry
     genre = Genre.find_by_id(params[:genres].first)#iterate and make work for multiple genres
     song.artist = artist
-    song.genres <<
+    song.genres << genre
+    song.save
     redirect to '/songs/:slug'
   end
 
