@@ -8,6 +8,5 @@ class SongsController < ApplicationController
   get '/songs/:slug' do
     
   end
-
-
+  
 end
