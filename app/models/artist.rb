@@ -13,6 +13,6 @@ class Artist < ActiveRecord::Base
         Artist.find_by(name: artist.name)
       end
     end
-    
+
   end
 end
