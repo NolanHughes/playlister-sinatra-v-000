@@ -13,7 +13,9 @@ class SongsController < ApplicationController
   post '/songs' do
     song = Song.create(name: params[:name])
     if Artist.all.find_by(name: params[:artist_name])
-    artist = Artist.create(name: params[:artist_name])
+      artist = Artist.all.find_by(name: params[:artist_name])
+    else
+      artist = Artist.create(name: params[:artist_name])
     genre = Genre.find_by_id(params[:genres].first)#iterate and make work for multiple genres
 
     song.artist = artist
