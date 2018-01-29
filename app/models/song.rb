@@ -10,7 +10,7 @@ class Song < ActiveRecord::Base
   def self.find_by_slug(slug)
     # unslugged = slug.gsub("-", " ").split.collect {|word| word.capitalize}.join(" ")
     # find_by(name: unslugged)
-    
+
     Song.all.find do |song|
       binding.pry
       if song.slug.include?(slug)
