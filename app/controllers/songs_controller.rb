@@ -5,13 +5,6 @@ class SongsController < ApplicationController
     erb :'songs/index'
   end
 
-  get '/songs/:slug' do
-    binding.pry
-    @song = Song.find_by_slug(params[:slug])
-
-    erb :'songs/show'
-  end
-
   get '/songs/new' do
     @genres = Genre.all
     erb :'songs/new'
@@ -20,5 +13,14 @@ class SongsController < ApplicationController
   post '/songs' do
     @song = Song.create(name: params[:Name])
   end
+
+  get '/songs/:slug' do
+    binding.pry
+    if @song = Song.find_by_slug(params[:slug])
+
+    erb :'songs/show'
+  end
+
+
 
 end
