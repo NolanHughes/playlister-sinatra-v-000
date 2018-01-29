@@ -37,7 +37,7 @@ class SongsController < ApplicationController
   end
 
   post '/songs/:slug' do
-    binding.pry
+
     @song = Song.find_by_slug(params[:slug])
 
     if Artist.all.find_by(name: params[:artist_name])
@@ -45,7 +45,7 @@ class SongsController < ApplicationController
     else
       artist = Artist.create(name: params[:artist_name])
     end
-
+        binding.pry
     Song.update(song.id, artist: artist)
   end
 
